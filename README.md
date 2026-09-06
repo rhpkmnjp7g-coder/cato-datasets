@@ -12,9 +12,9 @@ Catalogue, methodology and source notes: **https://www.catoappeals.com/data**
 | `london-parking-appeal-outcomes-2024-25.csv` | Parking PCNs issued, appeals received and decided, share allowed and share not contested, for all 33 London boroughs | London Tribunals, Environment and Traffic Adjudicators annual statistics | 33 |
 | `parking-appeal-index-2024-25.csv` | Coverage map: every civil enforcement authority in England and Wales; the 336 outside London read "not published" because the Traffic Penalty Tribunal publishes no per-authority figures | London Tribunals; Traffic Penalty Tribunal | 369 |
 | `parking-finance-england-2024-25.csv` | What each English council took in parking charges and penalties and spent enforcing them | MHCLG revenue outturn (RO2) 2024-25 | 347 |
-| `pcn-contravention-codes.csv` | Every PCN contravention code on the national list, official wording, plain-English meaning, family, level, camera-enforceability | National contravention code list | 75 |
-| `nederland-parkeerfeitcodes-2025-2026.csv` | Dutch parking feitcodes with legal basis, 2026 tariff, 2025 case counts and average amount | CJIB / Openbaar Ministerie feitcodeboekje | — |
-| `australia-parking-fines.csv` | Parking offences by state with legislation, section, offence code and amount | State revenue offices and penalty-notice datasets | — |
+| `pcn-contravention-codes.csv` | Every PCN contravention code on the national list, official wording, plain-English meaning, family, level, camera-enforceability | London Councils PCN contravention code list v7.0, effective 31 May 2022 | 84 |
+| `nederland-parkeerfeitcodes-2025-2026.csv` | Dutch parking feitcodes with legal basis, 2026 tariff, 2025 case counts and average amount | CJIB "Instroom feitgecodeerde zaken 2025"; Wahv bijlage on wetten.overheid.nl, in force 01-01-2026 | 52 |
+| `australia-parking-fines.csv` | Parking offences for **six** jurisdictions (NSW, ACT, VIC, TAS, QLD, SA) with legislation, section, offence code and amount. WA and the NT publish no machine-readable catalogue and are omitted rather than estimated. | Each state's own schedule or penalty-notice dataset, named per row | 700 |
 
 Each row carries a `page` column linking the CatoAppeals page that explains it.
 
