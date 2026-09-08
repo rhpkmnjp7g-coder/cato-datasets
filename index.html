@@ -40,7 +40,7 @@ No figure is derived, modelled or estimated.</p>
 mirror and issue tracker:
 <a href="https://github.com/rhpkmnjp7g-coder/cato-datasets">GitHub</a>.</p>
 
-<h2>The six datasets</h2>
+<h2>The thirteen datasets</h2>
 <div class="scroll">
 <table>
 <thead><tr><th>File</th><th>What it is</th><th>Source</th><th class="n">Rows</th></tr></thead>
@@ -63,6 +63,27 @@ mirror and issue tracker:
 <tr><td><code>australia-parking-fines.csv</code></td>
 <td>Parking offences for <strong>six</strong> jurisdictions (NSW, ACT, VIC, TAS, QLD, SA) with legislation, section, offence code and amount. WA and the NT publish no machine-readable catalogue and are omitted rather than estimated.</td>
 <td>Each state’s own schedule or penalty-notice dataset, named per row</td><td class="n">700</td></tr>
+<tr><td><code>appeal-win-rates-by-segment.csv</code></td>
+<td>Share of parking appeals won, by authority, by contravention code, by ground argued, and by their pairs. Aggregated from <strong>76,834 decided appeals</strong>, 2019-01-07 to 2026-09-05</td>
+<td>London Tribunals register; tribunal du stationnement payant; rechtspraak.nl</td><td class="n">1,100</td></tr>
+<tr><td><code>uk-private-parking-operators.csv</code></td>
+<td>Every company accredited to issue private parking charges in the UK — 210 across the BPA and IPC schemes, plus 11 debt collectors — with accreditation, appeal service, website and enforcement methods</td>
+<td>BPA Approved Operator Scheme; IPC Accredited Operator Scheme</td><td class="n">221</td></tr>
+<tr><td><code>uk-pcn-prefix-directory.csv</code></td>
+<td>Every PCN prefix and the authority that issues it, one row per prefix-authority pair</td>
+<td>PATROL Authority Directory</td><td class="n">431</td></tr>
+<tr><td><code>enforcement-authorities-england-wales.csv</code></td>
+<td>The 336 authorities whose appeals go to the Traffic Penalty Tribunal, with address, phone, challenge URL and what each enforces</td>
+<td>PATROL Authority Directory</td><td class="n">336</td></tr>
+<tr><td><code>uk-bus-lane-camera-authorities.csv</code></td>
+<td>The camera-enforcement authorities and what each is empowered to enforce</td>
+<td>PATROL Authority Directory</td><td class="n">134</td></tr>
+<tr><td><code>gb-penalty-fare-issuers.csv</code></td>
+<td>Every rail, Tube, tram and bus operator that charges a penalty fare, with appeal body, amounts and deadlines</td>
+<td>Each operator’s published revenue protection policy</td><td class="n">40</td></tr>
+<tr><td><code>uk-road-charging-schemes.csv</code></td>
+<td>Clean Air Zones, the London congestion charge and ULEZ, Oxford’s Zero Emission Zone, Durham, and the tolled crossings</td>
+<td>Each scheme’s own authority</td><td class="n">17</td></tr>
 </tbody>
 </table>
 </div>
@@ -95,6 +116,15 @@ than as multiples of a penalty unit. <code>amount_aud</code> is populated for al
 <p>Four rows in the finance file have no ONS code because they are joint arrangements rather than
 single authorities: the North and South Essex Parking Partnerships, North Gloucestershire, and
 King&rsquo;s Lynn and West Norfolk acting under authority delegated by Norfolk County Council.</p>
+
+<h2>Using the win-rate file</h2>
+<p>Grounds are keyword-detected from the adjudicator's written reasons: a ground appearing means
+it was <em>discussed</em> in the decision, not necessarily that the case turned on it. Authority and
+contravention-code segments are exact. Segments with fewer than 10 decisions are excluded, so the
+file will not tell you about a rare pairing. <code>win_rate_pct</code> counts allowed plus
+not-contested as a win.</p>
+<p>It is <strong>derived analysis, not a republication of the decisions</strong>. The decision text
+belongs to the tribunals that wrote it and is not redistributed here.</p>
 
 <h2>What the appeal data shows</h2>
 <p>London is the only part of the United Kingdom where per-authority parking appeal outcomes
