@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cato open datasets — parking enforcement and appeals</title>
+<meta name="description" content="Six open CC BY 4.0 datasets on parking enforcement and appeals in the UK, the Netherlands and Australia. Every figure republished from a public body's own source.">
+<style>
+  :root{--fg:#1a1a1a;--muted:#5c5c5c;--line:#e3e3e3;--bg:#fdfdfc;--accent:#1c4b82}
+  @media (prefers-color-scheme:dark){:root{--fg:#e8e8e6;--muted:#a0a0a0;--line:#2e2e2e;--bg:#131313;--accent:#7fb0e8}}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
+  .wrap{max-width:900px;margin:0 auto;padding:48px 24px 80px}
+  h1{font-size:1.9rem;line-height:1.2;margin:0 0 .4em}
+  h2{font-size:1.15rem;margin:2.4em 0 .6em;padding-bottom:.3em;border-bottom:1px solid var(--line)}
+  p{margin:0 0 1em}
+  a{color:var(--accent)}
+  .lede{font-size:1.05rem;color:var(--muted);margin-bottom:1.6em}
+  .scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  table{border-collapse:collapse;width:100%;font-size:.9rem;min-width:640px}
+  th,td{text-align:left;padding:.6em .7em;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-weight:600;white-space:nowrap}
+  td.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+  code{font:.85em ui-monospace,SFMono-Regular,Menlo,monospace;background:rgba(128,128,128,.12);padding:.15em .4em;border-radius:3px}
+  blockquote{margin:1em 0;padding:.7em 1em;border-left:3px solid var(--line);color:var(--muted)}
+  footer{margin-top:3em;padding-top:1.2em;border-top:1px solid var(--line);color:var(--muted);font-size:.88rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>Cato open datasets</h1>
+<p class="lede">Open data on parking enforcement and appeals, published by
+<a href="https://www.catoappeals.com">CatoAppeals</a>. Every file republishes figures a public
+body published itself, re-derived from the source workbooks and checked row by row.
+No figure is derived, modelled or estimated.</p>
+
+<p>Catalogue, methodology and source notes:
+<a href="https://www.catoappeals.com/data">catoappeals.com/data</a> —
+mirror and issue tracker:
+<a href="https://github.com/rhpkmnjp7g-coder/cato-datasets">GitHub</a>.</p>
+
+<h2>The six datasets</h2>
+<div class="scroll">
+<table>
+<thead><tr><th>File</th><th>What it is</th><th>Source</th><th class="n">Rows</th></tr></thead>
+<tbody>
+<tr><td><code>london-parking-appeal-outcomes-2024-25.csv</code></td>
+<td>PCNs issued, appeals received and decided, share allowed and share not contested, for all 33 London boroughs</td>
+<td>London Tribunals, Environment and Traffic Adjudicators annual statistics</td><td class="n">33</td></tr>
+<tr><td><code>parking-appeal-index-2024-25.csv</code></td>
+<td>Coverage map: every civil enforcement authority in England and Wales. The 336 outside London read “not published”, because the Traffic Penalty Tribunal publishes no per-authority figures</td>
+<td>London Tribunals; Traffic Penalty Tribunal</td><td class="n">369</td></tr>
+<tr><td><code>parking-finance-england-2024-25.csv</code></td>
+<td>What each English council took in parking charges and penalties, and spent enforcing them</td>
+<td>MHCLG revenue outturn (RO2) 2024-25</td><td class="n">347</td></tr>
+<tr><td><code>pcn-contravention-codes.csv</code></td>
+<td>Every PCN contravention code on the national list: official wording, plain-English meaning, family, level, camera-enforceability</td>
+<td>London Councils PCN contravention code list v7.0, effective 31 May 2022</td><td class="n">84</td></tr>
+<tr><td><code>nederland-parkeerfeitcodes-2025-2026.csv</code></td>
+<td>Dutch parking feitcodes with legal basis, 2026 tariff, 2025 case counts and average amount</td>
+<td>CJIB “Instroom feitgecodeerde zaken 2025”; Wahv bijlage on wetten.overheid.nl, in force 01-01-2026</td><td class="n">52</td></tr>
+<tr><td><code>australia-parking-fines.csv</code></td>
+<td>Parking offences for <strong>six</strong> jurisdictions (NSW, ACT, VIC, TAS, QLD, SA) with legislation, section, offence code and amount. WA and the NT publish no machine-readable catalogue and are omitted rather than estimated.</td>
+<td>Each state’s own schedule or penalty-notice dataset, named per row</td><td class="n">700</td></tr>
+</tbody>
+</table>
+</div>
+<p>Each row carries a <code>page</code> column linking the CatoAppeals page that explains it.</p>
+
+<h2>What the appeal data shows</h2>
+<p>London is the only part of the United Kingdom where per-authority parking appeal outcomes
+are published at all. Across London in 2024-25, <strong>17,121 parking appeals were decided
+and 50.6% were allowed</strong>. Boroughs range from 29.3% allowed (Southwark, 549 decided)
+to 70.1% (Redbridge, 1,804 decided).</p>
+<p>The Traffic Penalty Tribunal, which hears appeals for the 336 enforcement authorities in
+England outside London and in Wales, publishes national totals only. The coverage map lists
+all 369 authorities and marks which have no published figures, so the extent of that gap can
+be cited directly.</p>
+
+<h2>Citing</h2>
+<p>Two datasets carry a DOI:</p>
+<ul>
+<li><a href="https://doi.org/10.5281/zenodo.22008004">10.5281/zenodo.22008004</a> — London parking appeal outcomes by borough, 2024-25</li>
+<li><a href="https://doi.org/10.5281/zenodo.22010243">10.5281/zenodo.22010243</a> — English council parking and bus lane enforcement finance, 2024-25</li>
+</ul>
+
+<h2>Licence</h2>
+<p><a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0
+International (CC BY 4.0)</a>. Reproduce in whole or in part, commercially included, with
+attribution:</p>
+<blockquote>CatoAppeals, <em>[dataset title]</em>, https://www.catoappeals.com/data</blockquote>
+
+<h2>Regenerating</h2>
+<p>These CSVs are generated in the CatoAppeals repository (<code>npm run build:appeal-index-csv</code>
+and siblings) and copied here unchanged. Do not edit them by hand —
+<a href="https://github.com/rhpkmnjp7g-coder/cato-datasets/issues">open an issue</a> instead.</p>
+
+<footer>Published by <a href="https://www.catoappeals.com">CatoAppeals</a> under CC BY 4.0.</footer>
+
+</div>
+</body>
+</html>
