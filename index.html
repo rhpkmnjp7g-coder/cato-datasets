@@ -66,7 +66,35 @@ mirror and issue tracker:
 </tbody>
 </table>
 </div>
-<p>Each row carries a <code>page</code> column linking the CatoAppeals page that explains it.</p>
+<p>Each row links the CatoAppeals page that explains it: <code>page</code> in every file
+except the Dutch feitcodes, where the column is named <code>pagina</code>.</p>
+
+<h2>Reading the data</h2>
+<p><strong>Two kinds of absence, and they mean different things.</strong></p>
+<ul>
+<li><code>not published</code> — the source body publishes no figure. A fact about the source,
+not a gap in this dataset, and <strong>never a zero</strong>. A real zero is written <code>0</code>;
+both appear in the finance file, so treat them as distinct.</li>
+<li><strong>An empty cell</strong> — the column does not apply to that row. In the Australian file,
+<code>penalty_units</code> and <code>amount_basis</code> are empty for NSW, the ACT and South
+Australia, because those jurisdictions legislate parking fines as fixed dollar amounts rather
+than as multiples of a penalty unit. <code>amount_aud</code> is populated for all 700 rows.</li>
+</ul>
+<p>Coverage worth knowing before you analyse:</p>
+<div class="scroll">
+<table>
+<thead><tr><th>Column</th><th class="n">Populated</th><th>Note</th></tr></thead>
+<tbody>
+<tr><td>Appeal index, statistical columns</td><td class="n">33 / 369</td><td>Only London publishes per-authority outcomes</td></tr>
+<tr><td>Finance, on-street</td><td class="n">226 / 347</td><td></td></tr>
+<tr><td>Finance, penalty charge income</td><td class="n">183 / 347</td><td></td></tr>
+<tr><td>Finance, bus lane</td><td class="n">65 / 347</td><td>Most authorities outside London have no bus lane enforcement powers</td></tr>
+</tbody>
+</table>
+</div>
+<p>Four rows in the finance file have no ONS code because they are joint arrangements rather than
+single authorities: the North and South Essex Parking Partnerships, North Gloucestershire, and
+King&rsquo;s Lynn and West Norfolk acting under authority delegated by Norfolk County Council.</p>
 
 <h2>What the appeal data shows</h2>
 <p>London is the only part of the United Kingdom where per-authority parking appeal outcomes
