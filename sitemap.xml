@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  One page, listed so that Search Console has a sitemap to accept and a
+  lastmod to compare against. Nothing on the open web links here except
+  GitHub's own repository sidebar link, which GitHub marks nofollow, so
+  this file and a Request Indexing in Search Console are how the page
+  gets crawled at all.
+
+  The CSVs are deliberately not listed. A sitemap is for pages; the files
+  are reached from the page, and Google Dataset Search reads the schema.org
+  markup on catoappeals.com/data, not a list of CSV URLs here.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://rhpkmnjp7g-coder.github.io/cato-datasets/</loc>
+    <lastmod>2026-09-15</lastmod>
+  </url>
+</urlset>
